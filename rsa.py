@@ -3,7 +3,7 @@ import sys
 
 
 """Represents a prime checking fuction"""
-def is_prime(n):
+def f_is_prime(n):
     if n <= 1:
         return False
     if n <= 3:
@@ -19,9 +19,9 @@ def is_prime(n):
 
 
 """Represents a factorising fuction"""
-def factorize_rsa(n):
+def f_factorize_rsa(n):
     for i in range(2, n // 2 + 1):
-        if n % i == 0 and is_prime(i) and is_prime(n // i):
+        if n % i == 0 and f_is_prime(i) and f_is_prime(n // i):
             return i, n // i
     return n, 1
 
@@ -37,9 +37,8 @@ def main():
     try:
         with open(input_file, 'r') as file:
             rsa_number = int(file.read().strip())
-            p, q = factorize_rsa(rsa_number)
+            p, q = f_factorize_rsa(rsa_number)
             print(f"{rsa_number}={p}*{q}")
-
     except FileNotFoundError:
         print(f"File '{input_file}' not found.")
     except ValueError:
