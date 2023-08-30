@@ -3,6 +3,8 @@ import sys
 
 
 """Represents a factorising fuction"""
+
+
 def f_factorize_func(n):
     for f in range(2, n // 2 + 1):
         if n % f == 0:
@@ -11,6 +13,8 @@ def f_factorize_func(n):
 
 
 """Represent the main entry for the function"""
+
+
 def main():
     if len(sys.argv) != 2:
         print("Operation Failure")
@@ -34,5 +38,7 @@ def main():
 
 
 """Represents the exectution of the function main"""
+
+
 if __name__ == "__main__":
     main()

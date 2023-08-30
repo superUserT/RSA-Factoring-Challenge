@@ -3,6 +3,8 @@ import sys
 
 
 """Represents a prime checking fuction"""
+
+
 def f_is_prime(n):
     if n <= 1:
         return False
@@ -19,6 +21,8 @@ def f_is_prime(n):
 
 
 """Represents a factorising fuction"""
+
+
 def f_factorize_rsa(n):
     for i in range(2, n // 2 + 1):
         if n % i == 0 and f_is_prime(i) and f_is_prime(n // i):
@@ -27,6 +31,8 @@ def f_factorize_rsa(n):
 
 
 """Represent the main entry for the function"""
+
+
 def main():
     if len(sys.argv) != 2:
         print("Usage: rsa <file>")
@@ -46,6 +52,7 @@ def main():
 
 
 """Represents the exectution of the function main"""
+
+
 if __name__ == "__main__":
     main()
-
