@@ -6,7 +6,9 @@ import sys
 
 
 def f_factorize_func(n):
-    for f in range(2, n // 2 + 1):
+    if n % 2 == 0:
+        return 2, n // 2
+    for f in range(3, int(n**0.5) + 1, 2):
         if n % f == 0:
             return f, n // f
     return n, 1
